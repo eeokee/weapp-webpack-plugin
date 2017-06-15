@@ -1,4 +1,6 @@
-# wxapp-webpack-plugin
+Fork from Cap32/wxapp-webpack-plugin
+
+# weapp-webpack-plugin
 微信小程序 webpack 插件
 
 
@@ -23,7 +25,7 @@
 #### 安装
 
 ```bash
-yarn add -D wxapp-webpack-plugin
+yarn add -D weapp-webpack-plugin
 ```
 
 #### 配置 webpack
@@ -32,7 +34,7 @@ yarn add -D wxapp-webpack-plugin
 
 2. 在 `output` 上设置 `filename: '[name].js'。` **注意** 这里 `[name].js` 是因为 `webpack` 将会打包生成多个文件，文件名称将以 `[name]` 规则来输出
 
-3. 添加 `new WXAppWebpackPlugin()` 到 `plugins`
+3. 添加 `new WeappWebpackPlugin()` 到 `plugins`
 
 ###### `loader` 的使用提示
 
@@ -49,7 +51,7 @@ yarn add -D wxapp-webpack-plugin
 
 ```js
 const path = require('path');
-const WXAppWebpackPlugin = require('wxapp-webpack-plugin');
+const WeappWebpackPlugin = require('weapp-webpack-plugin');
 
 module.exports = {
 
@@ -65,7 +67,7 @@ module.exports = {
   plugins: [
 
     // 引入插件
-    new WXAppWebpackPlugin(),
+    new WeappWebpackPlugin(),
 
   ],
   module: {
@@ -113,7 +115,7 @@ module.exports = {
 
 ## API
 
-`new WXAppWebpackPlugin(options)`
+`new WeappWebpackPlugin(options)`
 
 ###### options
 
@@ -129,4 +131,4 @@ module.exports = {
 
 ## License
 
-MIT © Cap32
+MIT
