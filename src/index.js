@@ -1,4 +1,3 @@
-
 import { remove, readJson } from 'fs-promise';
 import { resolve, dirname, relative, join, parse } from 'path';
 import { optimize } from 'webpack';
@@ -17,7 +16,7 @@ const stripExt = (path) => {
 	return join(dir, name);
 };
 
-export default class WXAppPlugin {
+export default class WeappPlugin {
 	constructor(options = {}) {
 		this.options = defaults(options || {}, {
 			clear: true,
@@ -28,7 +27,6 @@ export default class WXAppPlugin {
 			commonModuleName: 'common.js',
 			forceTarget: true,
 			assetsChunkName: '__assets_chunk_name__',
-			// base: undefined,
 		});
 		this.options.include = [].concat(this.options.include);
 		this.options.exclude = [].concat(this.options.exclude);
